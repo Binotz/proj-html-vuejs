@@ -9,19 +9,23 @@
         <LatestBandSectionComponentVue/>
     </section>
 
-
+    <section class="latest-news">
+        <LatestNewsVue />
+    </section>
   </main>
 </template>
 
 <script>
 import SectionTitleVue from './SectionTitle.vue';
 import LatestBandSectionComponentVue from './LatestBandSectionComponent.vue';
-
+import LatestNewsVue
+ from './LatestNews.vue';
 export default {
     name: "MainComponent",  
     components:{
         SectionTitleVue,
-        LatestBandSectionComponentVue
+        LatestBandSectionComponentVue,
+        LatestNewsVue
 },
 }
 </script>
@@ -45,5 +49,8 @@ export default {
     }
     .latest-band-news{
         background-color: $primary_color;
+    }
+    .latest-news{
+        background-color: $secondary-color;
     }
 </style>
