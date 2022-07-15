@@ -12,20 +12,26 @@
     <section class="latest-news">
         <LatestNewsVue />
     </section>
+
+    <section class="testimonial">
+        <TestimonialComponentVue />
+    </section>
   </main>
 </template>
 
 <script>
 import SectionTitleVue from './SectionTitle.vue';
 import LatestBandSectionComponentVue from './LatestBandSectionComponent.vue';
-import LatestNewsVue
- from './LatestNews.vue';
+import LatestNewsVue from './LatestNews.vue';
+import TestimonialComponentVue from './TestimonialComponent.vue';
+
 export default {
     name: "MainComponent",  
     components:{
         SectionTitleVue,
         LatestBandSectionComponentVue,
-        LatestNewsVue
+        LatestNewsVue,
+        TestimonialComponentVue
 },
 }
 </script>
@@ -52,5 +58,12 @@ export default {
     }
     .latest-news{
         background-color: $secondary-color;
+    }
+    .testimonial{
+        background-image: url('@/assets/img/home-testimonial-parallax.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 1000px;
+        padding: 0;
     }
 </style>
