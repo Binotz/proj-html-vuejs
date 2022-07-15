@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: "LatestNews"
+    name: "LatestNewsComponent"
 }
 </script>
 

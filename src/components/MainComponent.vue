@@ -10,11 +10,16 @@
     </section>
 
     <section class="latest-news">
-        <LatestNewsVue />
+        <LatestNewsComponentVue />
     </section>
 
     <section class="testimonial">
         <TestimonialComponentVue />
+    </section>
+
+    <section class="live-dates">
+        <SectionTitle msg="Live Dates" />
+        <LivesDateComponent />
     </section>
   </main>
 </template>
@@ -22,16 +27,21 @@
 <script>
 import SectionTitleVue from './SectionTitle.vue';
 import LatestBandSectionComponentVue from './LatestBandSectionComponent.vue';
-import LatestNewsVue from './LatestNews.vue';
+import LatestNewsComponentVue from './LatestNewsComponent.vue';
 import TestimonialComponentVue from './TestimonialComponent.vue';
+import SectionTitle from './SectionTitle.vue';
+import LivesDateComponent from './LivesDateComponent.vue';
+
 
 export default {
     name: "MainComponent",  
     components:{
-        SectionTitleVue,
-        LatestBandSectionComponentVue,
-        LatestNewsVue,
-        TestimonialComponentVue
+    SectionTitleVue,
+    LatestBandSectionComponentVue,
+    LatestNewsComponentVue,
+    TestimonialComponentVue,
+    SectionTitle,
+    LivesDateComponent
 },
 }
 </script>
@@ -65,5 +75,8 @@ export default {
         background-size: cover;
         height: 1000px;
         padding: 0;
+    }
+    .live-dates{
+        background-color: $primary_color;
     }
 </style>
