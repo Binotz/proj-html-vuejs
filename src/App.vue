@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <HeaderComponentVue />
+    <MainComponentVue />
   </div>
 </template>
 
 <script>
 import HeaderComponentVue from './components/HeaderComponent.vue';
+import MainComponentVue from './components/MainComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    HeaderComponentVue
+    HeaderComponentVue,
+    MainComponentVue
   }
 }
 </script>

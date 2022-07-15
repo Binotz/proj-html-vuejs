@@ -51,8 +51,6 @@ export default {
         justify-content: center;
         align-items: center;
         height: calc(100% - 140px);
-        // text-align: center;
-        // padding-top: 20rem;
         color: white;
         h1{
             font-size: 8rem;
