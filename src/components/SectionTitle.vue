@@ -23,13 +23,15 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 25%;
     margin: 0 auto;
     text-align: center;
+    padding: 2rem 0;
 }
 h2{
     margin-bottom: 2rem;
     font-size: 4.5rem;
+    color: white;
 }
 p{
     color: $lynch;
