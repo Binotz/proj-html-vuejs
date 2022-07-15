@@ -2,18 +2,52 @@
   <div id="app">
     <HeaderComponentVue />
     <MainComponentVue />
+    <FooterComponentVue :menuList="menuList"/>
   </div>
 </template>
 
 <script>
 import HeaderComponentVue from './components/HeaderComponent.vue';
 import MainComponentVue from './components/MainComponent.vue';
+import FooterComponentVue from './components/FooterComponent.vue';  
 
 export default {
   name: 'App',
   components: {
     HeaderComponentVue,
-    MainComponentVue
+    MainComponentVue,
+    FooterComponentVue
+  },
+  data(){
+    return{
+      menuList:[
+      {
+        text:'Home',
+        link:'#',
+        currentSection: false
+      },
+      {
+        text:'Meet The Band',
+        link:'#',
+        currentSection: false
+      },
+      {
+        text:'Live Dates',
+        link:'#',
+        currentSection: false
+      },
+      {
+        text:'Latest News',
+        link:'#',
+        currentSection: false
+      },
+      {
+        text:'Albums',
+        link:'#',
+        currentSection: false
+      },
+      ],
+    }
   }
 }
 </script>
@@ -28,5 +62,9 @@ export default {
 }
 body{
   font-family: 'Roboto', sans-serif;
+}
+ul{
+  list-style-type: none;
+  margin-bottom: 0;
 }
 </style>

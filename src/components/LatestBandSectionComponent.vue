@@ -25,7 +25,7 @@
               </div>
               <div class="col-6">
                 <SingleCardComponentVue
-                  imgSource="blog-post3.jpg"
+                  imgSource="blog-post4.jpg"
                   title="While my guitar gently weeps"
                   :description=description
                   />

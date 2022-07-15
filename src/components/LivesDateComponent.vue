@@ -34,7 +34,6 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';
 .li-dates-list{
-    list-style-type: none;
     margin-bottom: 4rem;
     li{
         width: 100%;
