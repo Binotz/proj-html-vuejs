@@ -21,6 +21,10 @@
         <SectionTitle msg="Live Dates" />
         <LivesDateComponent />
     </section>
+
+    <section class="all-live-dates">
+        <AllLiveDatesComponent />
+    </section>
   </main>
 </template>
 
@@ -31,7 +35,7 @@ import LatestNewsComponentVue from './LatestNewsComponent.vue';
 import TestimonialComponentVue from './TestimonialComponent.vue';
 import SectionTitle from './SectionTitle.vue';
 import LivesDateComponent from './LivesDateComponent.vue';
-
+import AllLiveDatesComponent from './AllLiveDatesComponent.vue';
 
 export default {
     name: "MainComponent",  
@@ -41,7 +45,8 @@ export default {
     LatestNewsComponentVue,
     TestimonialComponentVue,
     SectionTitle,
-    LivesDateComponent
+    LivesDateComponent,
+    AllLiveDatesComponent
 },
 }
 </script>
@@ -66,7 +71,8 @@ export default {
     .latest-band-news{
         background-color: $primary_color;
     }
-    .latest-news{
+    .latest-news,
+    .all-live-dates{
         background-color: $secondary-color;
     }
     .testimonial{
