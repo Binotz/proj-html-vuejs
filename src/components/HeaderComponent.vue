@@ -4,7 +4,18 @@
     <div class="header-bar">
         <img src="@/assets/img/avada-music-logo.png" alt="logo">
         <div class="menu">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" @click="triggerMenu()"></i>
+            <div class="menu-open" :class="{'d-none': !displayMenu}">
+                <div class="header-menu">
+                    <img src="@/assets/img/avada-music-logo.png" alt="logo">
+                    <i class="fa-solid fa-xmark" @click="triggerMenu()"></i>
+                </div>
+                <ul>
+                    <li v-for="(page,index) in menuList" :key="index">
+                        <a :href="page.link" @click="triggerMenu()">{{page.text}}</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- jumbotron content -->
@@ -21,7 +32,20 @@
 
 <script>
 export default {
-    name: "HeaderComponent"
+    name: "HeaderComponent",
+    props:{
+        menuList: Array
+    },
+    data(){
+        return{
+            displayMenu: false,
+        }
+    },
+    methods:{
+        triggerMenu: function(){
+            this.displayMenu = !this.displayMenu;
+        }
+    }
 }
 </script>
 
@@ -85,5 +109,45 @@ export default {
             }
         }
         }
+    }
+    .menu-open{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $mandy;
+        .header-menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            i{
+                padding-right: 2rem;
+            }
+        }
+        img{
+            padding-left: 2rem;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80%;
+            li{
+                font-size: 3rem;
+                margin-bottom: 2rem;
+                a{
+                    text-decoration: none;
+                    color: #f8959e;
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+
     }
 </style>
