@@ -6,6 +6,12 @@
           <h3>{{title}}</h3>
           <p>{{description}}</p>
         </div>
+        <!-- Overlay -->
+        <div class="overlay">
+          <div class="overlay-text">
+            {{ title }}
+          </div>
+        </div>
     </div>
   </div>
 </template>
@@ -29,6 +35,21 @@ img{
 }
 .card-content{
   position: relative;
+  .overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    //display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0,0, .3);
+    .overlay-text{
+      color: white;
+    }
+  }
   .card-text{
     position: absolute;
     bottom: 0;
@@ -41,6 +62,15 @@ img{
     }
     p{
       color: $light_gray;
+    }
+  }
+  &:hover{
+    .overlay{
+      display: flex;
+      font-size: 1.5rem;
+    }
+    .card-text{
+      display:none;
     }
   }
 }
