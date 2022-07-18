@@ -24,27 +24,27 @@ export default {
       {
         text:'Home',
         link:'#music',
-        currentSection: false
+        
       },
       {
         text:'Meet The Band',
         link:'#all-live-dates',
-        currentSection: false
+        
       },
       {
         text:'Live Dates',
         link:'#live-dates',
-        currentSection: false
+        
       },
       {
         text:'Latest News',
         link:'#latest-band-news',
-        currentSection: false
+        
       },
       {
         text:'Albums',
         link:'#testimonial',
-        currentSection: false
+        
       },
       ],
     }

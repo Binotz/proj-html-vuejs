@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name:"SectionTitle",
+    name:"SectionTitleComponentVue",
     props:{
         msg: String
     },

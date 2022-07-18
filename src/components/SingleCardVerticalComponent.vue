@@ -32,7 +32,7 @@ export default {
 @import '@/assets/variables.scss';
 
 img{
-  height: 740px;
+  height: 748px;
   width: 100%;
   
 }

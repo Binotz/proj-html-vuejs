@@ -2,7 +2,7 @@
   <main>
     <section id="music">
         <div class="strike"></div>
-        <SectionTitleVue msg ="Music Is Life" />
+        <SectionTitleComponentVue msg ="Music Is Life" />
     </section>
     
     <section id="latest-band-news">
@@ -10,7 +10,7 @@
     </section>
 
     <section id="latest-news">
-        <LatestNewsComponentVue />
+        <ViewAllComponentVue msg="view all latest news" />
     </section>
 
     <section id="testimonial">
@@ -18,35 +18,31 @@
     </section>
 
     <section id="live-dates">
-        <SectionTitle msg="Live Dates" />
+        <SectionTitleComponentVue msg="Live Dates" />
         <LivesDateComponent />
     </section>
 
     <section id="all-live-dates">
-        <AllLiveDatesComponent />
+        <ViewAllComponentVue msg="view all live dates" />
     </section>
   </main>
 </template>
 
 <script>
-import SectionTitleVue from './SectionTitle.vue';
+import SectionTitleComponentVue from './SectionTitle.vue';
 import LatestBandSectionComponentVue from './LatestBandSectionComponent.vue';
-import LatestNewsComponentVue from './LatestNewsComponent.vue';
 import TestimonialComponentVue from './TestimonialComponent.vue';
-import SectionTitle from './SectionTitle.vue';
 import LivesDateComponent from './LivesDateComponent.vue';
-import AllLiveDatesComponent from './AllLiveDatesComponent.vue';
+import ViewAllComponentVue from './ViewAllComponent.vue';
 
 export default {
     name: "MainComponent",  
     components:{
-    SectionTitleVue,
-    LatestBandSectionComponentVue,
-    LatestNewsComponentVue,
-    TestimonialComponentVue,
-    SectionTitle,
-    LivesDateComponent,
-    AllLiveDatesComponent
+        LatestBandSectionComponentVue,
+        TestimonialComponentVue,
+        SectionTitleComponentVue,
+        LivesDateComponent,
+        ViewAllComponentVue,
 },
 }
 </script>
@@ -74,17 +70,13 @@ export default {
     #latest-news,
     #all-live-dates{
         background-color: $secondary-color;
+        color: white;
+        padding: 0;
         &:hover{
             background-color: white;
-            *{
-                background-color: white;
-                a{
-                    color: black;
-                }
+            a{
+                color: black;
             }
-        }
-        >a{
-            color: white;
         }
     }
     #testimonial{

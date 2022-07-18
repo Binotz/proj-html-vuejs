@@ -1,6 +1,5 @@
 <template>
   <div class="interview">
-    <!-- <img src="@/assets/img/home-interview-parallax.jpg" alt="interview"> -->
     <p>"I just listened to it and said to myself, "Man, I really love this album." Still, today, it just sounds so fresh. It sounds full of ideas. These guys knew what they were doing. They're good. And they're inventive. I haven't heard anything this year that's as inventive. I don't really expect to."</p>
     <img src="@/assets/img/band_interview_play_icon.png" alt="play button">
   </div>

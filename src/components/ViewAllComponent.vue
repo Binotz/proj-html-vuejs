@@ -1,24 +1,34 @@
 <template>
-  <div class="latest-news">
-    <a href="#">View all latest news</a>
+  <div class="banner">
+    <a href="#">{{msg}}</a>
   </div>
 </template>
 
 <script>
 export default {
-    name: "LatestNewsComponent"
+    name: "ViewAllComponent",
+    props:{
+        msg: String
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';
-.latest-news{
+.banner{
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    height: 120px;
     a{
         text-decoration: none;
+        color: white;
+    }
+    &:hover{
+      a{
+        color: black;
+      }
     }
 }
 

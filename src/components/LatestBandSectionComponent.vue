@@ -47,7 +47,7 @@
           </div>
           <!-- right column -->
           <div class="right-column col-4">
-          <div class="row h-100 gy-4">
+          <div class="row h-100 gy-3">
             <div class="col-12">
               <SingleCardVerticalComponentVue
                 class="vertical-post"

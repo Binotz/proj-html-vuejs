@@ -43,7 +43,6 @@ img{
     right: 0;
     left: 0;
     bottom: 0;
-    //display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 0,0, .3);
