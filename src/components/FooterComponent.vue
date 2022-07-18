@@ -4,7 +4,7 @@
         <img src="@/assets/img/avada-music-logo-retina.png" alt="footer logo">
         <ul>
             <li v-for="(elem, index) in menuList" :key="index">
-                <a :href="elem.link"> {{ elem.text }} </a>
+                <a :href="elem.link" :class="{'active': elem.currentPage}" @mouseenter="setCurrent(index)"> {{ elem.text }} </a>
             </li>
         </ul>
     </div>
@@ -26,6 +26,12 @@ export default {
     name: "FooterComponent",
     props:{
         menuList: Array
+    },
+    methods:{
+        setCurrent: function(index){
+            this.$emit('setCurrentPage', index);
+            console.log(index);
+        }
     }
 }
 </script>
@@ -49,6 +55,9 @@ export default {
             text-decoration: none;
             color: $light_gray;
         }
+    }
+    .active{
+        color: white;
     }
 }
 .footer-bottom{

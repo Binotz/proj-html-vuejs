@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <HeaderComponentVue :menuList="menuList"/>
+    <HeaderComponentVue :menuList="menuList" @setCurrentPage="setCurrentPage"/>
     <MainComponentVue />
-    <FooterComponentVue :menuList="menuList"/>
+    <FooterComponentVue :menuList="menuList" @setCurrentPage="setCurrentPage"/>
   </div>
 </template>
 
@@ -24,31 +24,37 @@ export default {
       {
         text:'Home',
         link:'#music',
-        
+        currentPage: true
       },
       {
         text:'Meet The Band',
         link:'#all-live-dates',
-        
+        currentPage: false
       },
       {
         text:'Live Dates',
         link:'#live-dates',
-        
+        currentPage: false
       },
       {
         text:'Latest News',
         link:'#latest-band-news',
-        
+        currentPage: false
       },
       {
         text:'Albums',
         link:'#testimonial',
-        
+        currentPage: false
       },
       ],
     }
-  }
+  },
+  methods:{
+    setCurrentPage: function(index){
+      this.menuList.forEach(element => element.currentPage = false);
+      this.menuList[index].currentPage = true;
+    }
+  },
 }
 </script>
 

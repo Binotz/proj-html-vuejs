@@ -12,7 +12,7 @@
                 </div>
                 <ul>
                     <li v-for="(page,index) in menuList" :key="index">
-                        <a :href="page.link" @click="triggerMenu()">{{page.text}}</a>
+                        <a :href="page.link" @click="triggerMenu()" @mouseenter="setCurrent(index)" :class="{'active': page.currentPage}">{{page.text}}</a>
                     </li>
                 </ul>
             </div>
@@ -44,6 +44,10 @@ export default {
     methods:{
         triggerMenu: function(){
             this.displayMenu = !this.displayMenu;
+        },
+        setCurrent: function(index){
+            this.$emit('setCurrentPage', index);
+            console.log(index);
         }
     }
 }
@@ -117,6 +121,9 @@ export default {
         bottom: 0;
         right: 0;
         background-color: $mandy;
+        .active{
+            color: white;
+        }
         .header-menu{
             display: flex;
             justify-content: space-between;
