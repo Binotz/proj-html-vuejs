@@ -77,6 +77,10 @@ export default {
                 }
                 &.live{
                     border: 1px solid $white;
+                    &:hover{
+                        background-color: white;
+                        color: black;
+                    }
                 }
             }
         }

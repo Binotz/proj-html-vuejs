@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
+@import '@/assets/variables.scss';
 *{
   margin: 0;
   padding: 0;
@@ -66,5 +66,16 @@ body{
 ul{
   list-style-type: none;
   margin-bottom: 0;
+}
+.latest-news,
+.all-live-dates{
+  a{
+    color: white;
+  }
+  &:hover{
+    a{
+      color: black;
+    }
+  }
 }
 </style>

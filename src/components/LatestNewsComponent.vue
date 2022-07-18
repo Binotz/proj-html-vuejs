@@ -19,7 +19,6 @@ export default {
     text-transform: uppercase;
     a{
         text-decoration: none;
-        color: white;
     }
 }
 

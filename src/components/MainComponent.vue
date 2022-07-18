@@ -74,6 +74,18 @@ export default {
     .latest-news,
     .all-live-dates{
         background-color: $secondary-color;
+        &:hover{
+            background-color: white;
+            *{
+                background-color: white;
+                a{
+                    color: black;
+                }
+            }
+        }
+        >a{
+            color: white;
+        }
     }
     .testimonial{
         background-image: url('@/assets/img/home-testimonial-parallax.jpg');
