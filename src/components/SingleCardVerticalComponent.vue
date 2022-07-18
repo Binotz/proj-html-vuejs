@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    name:"SingleCardComponent",
+    name:"SingleCardVerticalComponent",
     props:{
         imgSource: String,
         title: String,
@@ -32,7 +32,9 @@ export default {
 @import '@/assets/variables.scss';
 
 img{
+  height: 740px;
   width: 100%;
+  
 }
 .card-content{
   position: relative;
@@ -43,7 +45,6 @@ img{
     right: 0;
     left: 0;
     bottom: 0;
-    //display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 0,0, .3);

@@ -1,28 +1,28 @@
 <template>
   <main>
-    <section class="music">
+    <section id="music">
         <div class="strike"></div>
         <SectionTitleVue msg ="Music Is Life" />
     </section>
     
-    <section class="latest-band-news">
+    <section id="latest-band-news">
         <LatestBandSectionComponentVue/>
     </section>
 
-    <section class="latest-news">
+    <section id="latest-news">
         <LatestNewsComponentVue />
     </section>
 
-    <section class="testimonial">
+    <section id="testimonial">
         <TestimonialComponentVue />
     </section>
 
-    <section class="live-dates">
+    <section id="live-dates">
         <SectionTitle msg="Live Dates" />
         <LivesDateComponent />
     </section>
 
-    <section class="all-live-dates">
+    <section id="all-live-dates">
         <AllLiveDatesComponent />
     </section>
   </main>
@@ -56,7 +56,7 @@ export default {
     section{
         padding: 3rem 0;
     }
-    .music{
+    #music{
         padding: 4rem 0;
         background-color: $gray;
         color: white;
@@ -65,14 +65,14 @@ export default {
             margin: 0 auto;
             margin-top: -4rem;
             margin-bottom: 4rem;
-            border:10px solid $mandy;
+            border:9px solid $mandy;
         }
     }
-    .latest-band-news{
+    #latest-band-news{
         background-color: $primary_color;
     }
-    .latest-news,
-    .all-live-dates{
+    #latest-news,
+    #all-live-dates{
         background-color: $secondary-color;
         &:hover{
             background-color: white;
@@ -87,14 +87,14 @@ export default {
             color: white;
         }
     }
-    .testimonial{
+    #testimonial{
         background-image: url('@/assets/img/home-testimonial-parallax.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         height: 1000px;
         padding: 0;
     }
-    .live-dates{
+    #live-dates{
         background-color: $primary_color;
     }
 </style>

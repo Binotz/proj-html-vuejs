@@ -23,27 +23,27 @@ export default {
       menuList:[
       {
         text:'Home',
-        link:'#',
+        link:'#music',
         currentSection: false
       },
       {
         text:'Meet The Band',
-        link:'#',
+        link:'#all-live-dates',
         currentSection: false
       },
       {
         text:'Live Dates',
-        link:'#',
+        link:'#live-dates',
         currentSection: false
       },
       {
         text:'Latest News',
-        link:'#',
+        link:'#latest-band-news',
         currentSection: false
       },
       {
         text:'Albums',
-        link:'#',
+        link:'#testimonial',
         currentSection: false
       },
       ],
