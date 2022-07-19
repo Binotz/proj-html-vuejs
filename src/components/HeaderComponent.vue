@@ -6,7 +6,7 @@
         <div class="menu">
             <i class="fa-solid fa-bars" @click="triggerMenu()"></i>
             <!-- menu start -->
-            <div class="menu-open" :class="{'d-none': displayMenu}">
+            <div class="menu-open" :class="{'d-none': displayMenu, 'popup': !displayMenu}">
                 <div class="header-menu">
                     <img src="@/assets/img/avada-music-logo.png" alt="logo">
                     <i class="fa-solid fa-xmark" @click="triggerMenu()"></i>
@@ -139,7 +139,6 @@ export default {
         img{
             padding-left: 2rem;
         }
-
         ul{
             display: flex;
             flex-direction: column;
@@ -158,6 +157,20 @@ export default {
                 }
             }
         }
-
+    }
+    .popup{
+        animation-name: popup;
+        animation-duration: .3s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    // Animation
+    @keyframes popup{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
     }
 </style>

@@ -51,7 +51,9 @@ export default {
   },
   methods:{
     setCurrentPage: function(index){
+      //reset dell'elemento corrente
       this.menuList.forEach(element => element.currentPage = false);
+      //set dell'elemento attualmente selezionato tramite index
       this.menuList[index].currentPage = true;
     }
   },
