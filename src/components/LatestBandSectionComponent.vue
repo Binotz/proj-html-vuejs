@@ -9,7 +9,6 @@
             <!-- large post -->
                 <div class="col-12">
                   <SingleCardComponentVue 
-                    :rotation="'horizontal'"
                     imgSource="blog_music_techo.jpg" 
                     title="Technology and Music"
                     :description = description  
@@ -19,7 +18,6 @@
               <!-- 2 vertical posts -->
               <div class="col-6">
                 <SingleCardComponentVue
-                  :rotation="'vertical'"
                   imgSource="blog-post3.jpg"
                   title="While my guitar gently weeps"
                   :description=description
@@ -27,7 +25,6 @@
               </div>
               <div class="col-6">
                 <SingleCardComponentVue
-                  :rotation="'vertical'"
                   imgSource="blog-post4.jpg"
                   title="While my guitar gently weeps"
                   :description=description
@@ -37,7 +34,6 @@
             <!-- Large post -->
               <div class="col-12">
                 <SingleCardComponentVue
-                  :rotation="'horizontal'"
                   imgSource="blog_flavor_rock.jpg"
                   title="The flavor of rock"
                   :description=description
@@ -54,7 +50,6 @@
                 imgSource="blog-post1.jpg" 
                 title="Taking it back to the old school"
                 :description = description
-                :rotation="'vertical'"
               /> 
             </div>
             <div class="col-12"></div> 
@@ -63,7 +58,6 @@
                 imgSource="blog-post2.jpg" 
                 title="Sharing the stage with a legend"
                 :description = description
-                :rotation="'vertical'"
               />
             </div>
               

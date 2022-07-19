@@ -1,7 +1,7 @@
 <template>
   <div class="card-layout">
     <div class="card-content">
-      <img :src="require(`@/assets/img/${imgSource}`)" alt="Alt text">
+      <img :src="require(`@/assets/img/${imgSource}`)" :alt="title">
         <div class="card-text">
           <h3>{{title}}</h3>
           <p>{{description}}</p>

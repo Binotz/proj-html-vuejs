@@ -5,7 +5,8 @@
         <img src="@/assets/img/avada-music-logo.png" alt="logo">
         <div class="menu">
             <i class="fa-solid fa-bars" @click="triggerMenu()"></i>
-            <div class="menu-open" :class="{'d-none': !displayMenu}">
+            <!-- menu start -->
+            <div class="menu-open" :class="{'d-none': displayMenu}">
                 <div class="header-menu">
                     <img src="@/assets/img/avada-music-logo.png" alt="logo">
                     <i class="fa-solid fa-xmark" @click="triggerMenu()"></i>
@@ -16,6 +17,7 @@
                     </li>
                 </ul>
             </div>
+            <!-- menu end -->
         </div>
     </div>
     <!-- jumbotron content -->
@@ -38,16 +40,17 @@ export default {
     },
     data(){
         return{
-            displayMenu: false,
+            displayMenu: true,
         }
     },
     methods:{
         triggerMenu: function(){
+            //abilito/disabilito la visualizzazione del menu 
             this.displayMenu = !this.displayMenu;
         },
         setCurrent: function(index){
+            //passo l'index al parent App.vue
             this.$emit('setCurrentPage', index);
-            console.log(index);
         }
     }
 }

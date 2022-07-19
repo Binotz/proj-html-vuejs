@@ -65,6 +65,7 @@ export default {
     },
     methods:{
         showCard: function(index){
+            // se clicco sull'elemento aperto, imposto la currentCard ad un numero negativo in modo da essere sicuro di non mostrare elementi, altrimenti la imposto come index
             (index === this.currentCard) ? this.currentCard = -1 : this.currentCard = index;
         }
     }

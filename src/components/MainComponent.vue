@@ -1,27 +1,34 @@
 <template>
   <main>
+
+    <!-- Music is life section -->
     <section id="music">
         <div class="strike"></div>
         <SectionTitleComponentVue msg ="Music Is Life" />
     </section>
     
+    <!-- Latest band news section-->
     <section id="latest-band-news">
         <LatestBandSectionComponentVue/>
     </section>
 
+    <!-- View all latest news bar -->
     <section id="latest-news">
         <ViewAllComponentVue msg="view all latest news" />
     </section>
 
+    <!-- Caption section -->
     <section id="testimonial">
         <TestimonialComponentVue />
     </section>
 
+    <!-- Live dates section -->
     <section id="live-dates">
         <SectionTitleComponentVue msg="Live Dates" />
         <LivesDateComponent />
     </section>
 
+    <!-- View all live dates bar -->
     <section id="all-live-dates">
         <ViewAllComponentVue msg="view all live dates" />
     </section>
